@@ -1,0 +1,109 @@
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #0a0a0a; /* Dark Background */
+    color: #00ffcc; /* Cyberpunk Green Text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.button {
+    padding: 15px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #00ffcc;
+    background-color: #222; /* Dark Button Background */
+    border: 2px solid #00ffcc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #111; /* Darker Button Background on Hover */
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+    margin: 20px 0;
+    background-color: #111; /* Dark Board Background */
+    border: 2px solid #00ffcc;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #00ffcc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: #222; /* Darker Cell Background */
+    transition: background-color 0.3s;
+}
+
+.cell:hover {
+    background-color: #333; /* Darker Cell Background on Hover */
+}
+
+.message {
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #222; /* Dark Button Background */
+    border: 2px solid #00ffcc;
+    border-radius: 5px;
+    color: #00ffcc;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #111; /* Darker Button Background on Hover */
+}
+
+/* Media Query for Mobile */
+@media (max-width: 600px) {
+    .board {
+        grid-template-columns: repeat(3, 80px);
+    }
+
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 18px;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
